@@ -5,8 +5,9 @@ const parentsTable = document.querySelector("#parents-table");
 const childrenTable = document.querySelector("#children-table");
 const sponsorsTable = document.querySelector("#sponsors-table");
 
-const prefix = document.querySelector("link[rel='stylesheet']")?.getAttribute("href")?.replace(/css\/site\.css$/, "") || "/";
-const dbUrl = `${prefix}assets/data/baptisms.sqlite`;
+const dbUrl =
+  document.querySelector("[data-db]")?.dataset.db ||
+  `${new URL("../../assets/data/baptisms.sqlite", import.meta.url)}`;
 const wasmUrl = "https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.13.0/sql-wasm.wasm";
 
 let db;

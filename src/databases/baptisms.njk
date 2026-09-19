@@ -1,0 +1,70 @@
+---
+layout: layouts/base.njk
+title: Cork Baptismal Registers
+permalink: /databases/baptisms/
+wide: true
+searchPage: true
+---
+<h1>Cork Baptismal Registers</h1>
+<p>Enter a surname to see inferred family groupings, then a baptised child, then sponsors. The search runs in your browser against a SQLite copy of the register. The file now on the site is a small demonstration set until the full CSV export is imported.</p>
+<div class="search-panel">
+  <form class="search-bar" id="surname-form">
+    <label>Surname search
+      <input type="search" id="surname" name="surname" placeholder="e.g. Sullivan" autocomplete="off">
+    </label>
+    <button type="submit">Search</button>
+  </form>
+  <p id="search-status" class="notes" aria-live="polite">Loading register…</p>
+  <div class="table-wrap">
+    <table class="record-table" id="parents-table" hidden>
+      <caption>Parent listing — possible family groupings</caption>
+      <thead>
+        <tr>
+          <th>Father</th>
+          <th>Mother</th>
+          <th>Children</th>
+          <th>Start</th>
+          <th>Last</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div class="table-wrap">
+    <table class="record-table" id="children-table" hidden>
+      <caption>Baptised individuals</caption>
+      <thead>
+        <tr>
+          <th>Index</th>
+          <th>Year</th>
+          <th>House / terrace / row</th>
+          <th>Address</th>
+          <th>Town / district</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div class="table-wrap">
+    <table class="record-table" id="sponsors-table" hidden>
+      <caption>Godparents &amp; other sponsors</caption>
+      <thead>
+        <tr>
+          <th>Witness</th>
+          <th>Sponsor</th>
+          <th>By proxy</th>
+          <th>Occupation</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+<p>Please be aware of the following points;</p>
+<ul class="notes">
+  <li>Transcribing is not an easy task. In many cases the original registers are extremely difficult to read, and one’s interpretation of the written word often differs from individual to individual transcribing and those who double-check, and double-check prior to data entry.</li>
+  <li>Additionally, some letters in old handwriting are often difficult to recognize or are commonly confused because of curls and flourishes. There are also differences in old style when compared to todays.</li>
+  <li>There may be cases of total miss-transcribing, and as a consequence, incorrectly entered into original database.</li>
+  <li>On the vast number of occasions, the priest recording the entry detail often use abbreviation for names, and address. Many names are also recorded in their Latin form. Others are simply misspelt.</li>
+  <li>These are good reasons enough for employing our standard naming convention, and ask that you simply complete a <a href="{{ '/request-for-information/' | url }}">Request for Information</a> in order that you may provide us with as much known information as possible.</li>
+</ul>

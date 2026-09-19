@@ -1,0 +1,17 @@
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="{{ '/' | url }}">
+      <img class="brand__mark" src="{{ '/assets/images/brand/cork-city-watermark.jpg' | url }}" alt="Cork city arms">
+      <span class="brand__text">
+        <span class="brand__name">Cork Ancestral Archive</span>
+        <span class="brand__and">&amp;</span>
+        <span class="brand__name">Genealogical Research</span>
+      </span>
+      <img class="brand__quill" src="{{ '/assets/images/brand/quill.jpg' | url }}" alt="">
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      Menu
+    </button>
+    {% include "partials/nav.njk" %}
+  </div>
+</header>

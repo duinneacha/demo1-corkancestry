@@ -1,0 +1,18 @@
+{
+  "name": "demo1-corkancestry",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Cork Ancestral Archive & Genealogical Research — static rebuild of corkancestry.com",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "import-baptisms": "node scripts/import-baptisms.mjs",
+    "copy-images": "node scripts/copy-images.mjs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "sharp": "^0.34.4",
+    "sql.js": "^1.13.0"
+  }
+}

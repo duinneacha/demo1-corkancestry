@@ -1,0 +1,10 @@
+node_modules/
+_site/
+.cache/
+*.log
+.env
+.env.*
+data/imports/*.csv
+src/assets/data/baptisms.full.sqlite
+.DS_Store
+Thumbs.db

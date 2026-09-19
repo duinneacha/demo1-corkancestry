@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} — {% endif %}{{ site.shortTitle }}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <meta name="keywords" content="{{ site.keywords }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400;1,7..72,600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/css/site.css' | url }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% include "partials/header.njk" %}
+  <main id="main" class="main">
+    <article class="article{% if wide %} article--wide{% endif %}">
+      {{ content | safe }}
+    </article>
+    {% if searchPage %}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.13.0/sql-wasm.js"></script>
+      <script type="module" src="{{ '/js/baptism-search.js' | url }}"></script>
+    {% endif %}
+  </main>
+  {% include "partials/footer.njk" %}
+  <script src="{{ '/js/nav.js' | url }}" defer></script>
+</body>
+</html>

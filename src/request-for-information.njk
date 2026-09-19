@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+title: Request for Information
+permalink: /request-for-information/
+---
+<h1>Request For Information</h1>
+<p>Send a brief outline of the information you are seeking. A preliminary search is then conducted, and findings are returned with a schedule and costing. This is not a 24 hour service.</p>
+{% if site.formspree %}
+<form class="form" action="https://formspree.io/f/{{ site.formspree }}" method="POST">
+{% else %}
+<form class="form" action="mailto:{{ site.email }}?subject=Request%20for%20Information" method="post" enctype="text/plain">
+{% endif %}
+  <label>Your Name
+    <input type="text" name="name" required>
+  </label>
+  <label>E-Mail Address
+    <input type="email" name="email" required>
+  </label>
+  <label>Address
+    <input type="text" name="address" value="Your State &amp; Country Only">
+  </label>
+  <label>Request for information
+    <textarea name="message" rows="8" required>Brief outline of information sought</textarea>
+  </label>
+  <button type="submit">Send Request</button>
+</form>
+<p class="notes">You may also write directly to <a href="mailto:{{ site.email }}?subject=Request%20for%20Information">{{ site.email }}</a>.</p>
